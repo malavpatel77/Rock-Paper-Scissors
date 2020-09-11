@@ -1,0 +1,25 @@
+import secrets 
+comp_inp = ['r','p','s'];
+
+def logic(user,computer):
+    if user == 'r' and computer == 's':
+        return ("Use Has won ")
+    elif user == 's' and computer == 'r':
+        return ("Computer Has won ")
+    elif user == 'p' and computer == 'r':
+        return ("You have won ")
+    elif user == 'r' and computer == 'p':
+        return ("Computer as won ")
+    elif user == 's' and computer == 'p':
+        return ("You have won")
+    elif user == 'p' and computer == 's':
+        return ("Computer has won")
+    elif user == computer:
+        return ("Its a Tie")
+    else:
+        return("Please follow the instruction")
+while True:
+    user = input("Enter rock, paper, sissors, as r, p , s respectively ");
+    computer = secrets.choice(comp_inp);
+    print (user,computer);
+    print(logic(user,computer));
